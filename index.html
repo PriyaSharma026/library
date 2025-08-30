@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Library</h1>
+        <!-- <button id="add-new-btn"><img src="./icons/Add.svg" alt="add Icon"> <span>New Book</span></button> -->
+    </header>
+    <main>
+        <div id="books-container">
+        
+        </div>
+        <div id="form-container">
+            <form>
+                <h1>Add a new book</h1>
+                <div>
+                    <label for="title">Book Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author">
+                </div>
+                <div>
+                    <label for="pages">No. of Pages</label>
+                    <input type="tel" id="pages" name="pages">
+                </div>
+                <div>
+                    <label for="read">Have you already read this?</label>
+                    <input type="checkbox" id="read" name="read">
+                </div>
+                <div>
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
