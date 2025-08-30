@@ -3,7 +3,7 @@ const titleInput = document.querySelector("#title");
 const authorInput = document.querySelector("#author");
 const pagesInput = document.querySelector("#pages");
 const readInput = document.querySelector("#read");
-const submitBtn = document.querySelector("#submit");
+const form = document.querySelector("form");
 
 const myLibrary = [];
 
@@ -16,7 +16,7 @@ function Book(title, author, pages, isRead) {
 }
 
 function addBookToLibrary(e, title, author, pages, isRead) {
-  e.preventDefault();
+  e.preventDefault(); 
   const newBook = new Book(title, author, pages, isRead);
   myLibrary.push(newBook);
   displayBooks();
@@ -42,12 +42,10 @@ function displayBooks() {
     bookCard.appendChild(pagesPara);
     bookCard.appendChild(readPara);
     booksContainer.appendChild(bookCard);
-
   })
 }
 
-
-submitBtn.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
   const isRead = readInput.checked ? "Yes" : "No";
   addBookToLibrary(e, titleInput.value, authorInput.value, pagesInput.value, isRead);
   titleInput.value = '';
